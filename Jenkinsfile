@@ -4,7 +4,7 @@ stages {
 stage('Clone Repository') {
 
 steps {
-git 'https://github.com/Mamatha1206/Jenkins_repo.git'
+git url:'https://github.com/Mamatha1206/Jenkins_repo.git',branch:'main'
 }
 }
 stage('Build') {
