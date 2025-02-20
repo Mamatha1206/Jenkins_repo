@@ -6,7 +6,7 @@ pipeline {
         git url:'https://github.com/Mamatha1206/Jenkins_repo.git', branch:'main'
       }
     }
-    stage ('Install Dependencies') {
+    stage ('Set Up Virtual Environment') {
       steps {
         sh 'python3 -m venv venv'
         sh '. venv/bin/activate'
