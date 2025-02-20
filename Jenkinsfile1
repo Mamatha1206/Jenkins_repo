@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Clone Repository') {
       steps {
-        git url:'https://gtihub.com/Mamatha1206/Jenkins_repo.git' branch:'main'
+        git url:'https://gtihub.com/Mamatha1206/Jenkins_repo.git', branch:'main'
       }
     }
     stage ('Install Dependencies') {
