@@ -11,5 +11,18 @@ pipeline {
           sh 'python3 first.py'
 }
 }
+stage('Build') {
+            steps {
+                sh 'build-npm'  // Example: 'npm run build' or 'make'
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: '**/build/**', fingerprint: true
+            }
+        }
+    }
+}
 }
 }
